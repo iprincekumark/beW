@@ -1,0 +1,31 @@
+<!-- 
+    Develop and demonstrate the usage of inline, internal and
+external style sheet using CSS.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS internal,external and inline</title>
+        <link rel="stylesheet" href="style.css" />
+        <style>
+            body {
+                background-color: linen;
+            }
+            .first {
+                background-color: blue;
+                height: 100px;
+                width: 100px;
+            }
+            .second{
+                background-color: green;
+                height:100px;
+                width:100px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="first">BOX</div>
+        <div class="second">BOX</div>
+        <div style="background-color: red; height: 100px; width: 100px">BOX</div>
+    </body>
+</html>

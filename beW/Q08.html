@@ -1,0 +1,68 @@
+<!-- 
+    Write JavaScript to validate the following fields of the
+Registration page. 1. First Name (Name should be min 4
+characters and max 8 characters) 2. Password & Confirm
+Password (Password should not be less than 8 characters
+length). 3. Email id (should not contain any invalid mail) 4.
+Mobile Number (Phone number should be 8 digits only) 5. Last
+Name and Address (should not be Empty). 
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>FORM</title>
+  </head>
+  <script>
+    function validate() {
+      let fN = document.myform.fname.value;
+      let pass1 = document.myform.pass1.value;
+      let pass2 = document.myform.pass2.value;
+      let email = document.myform.email.value;
+      let pNum = document.myform.pNum.value;
+      let lN = document.myform.lname.value;
+      let address = document.myform.address.value;
+
+      let pat1 = /[A-Za-z]{4,}/; //first name
+      let pat3 = /^[a-zA-Z0-9]{8,}$/; //password
+      let pat4 = /^\w+([.\-]?\w+)*@\w+([.\-]?\w+)*(\.\w{2,3})+$/; //email
+      let pat2 = /\d{8}/; //phone number
+      let pat5 = /[A-Za-z]{1,}/; //last name
+
+      if (fN == null || fN == "" || !pat1.test(fN) || fN.length > 8) {
+        alert("Check your name !");
+        return false;
+      } else if (!pat3.test(pass1) && pass1 != pass2) {
+        alert("Check your password !");
+        return false;
+      } else if (!pat4.test(email)) {
+        alert("Check the email !");
+        return false;
+      } else if (!pat2.test(pNum)) {
+        alert("Check the phone number !");
+        return false;
+      } else if (!pat5.test(lN)) {
+        alert("Check the last name !");
+        return false;
+      } else if (!pat5.test(address)) {
+        alert("Check the address !");
+        return false;
+      } else {
+        alert("Thank you for the Submission !");
+      }
+    }
+  </script>
+  <body bgcolor="#d1ff7d">
+    <form name="myform" onsubmit="validate()" style="padding-left: 40%">
+      <h1><u>Registration Page</u></h1>
+      First Name: <input type="text" name="fname" /> <br /><br />
+      Password: <input type="password" name="pass1" /> <br /><br />
+      Confirm Password: <input type="password" name="pass2" /> <br /><br />
+      Email: <input type="text" name="email" /> <br /><br />
+      Phone Number: <input type="number" name="pNum" /> <br /><br />
+      Last Name: <input type="text" name="lname" /> <br /><br />
+      Address: <input type="address" name="address" /> <br /><br />
+      <input type="submit" name="rejister" />
+      <br /><br />
+    </form>
+  </body>
+</html>

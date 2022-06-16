@@ -1,0 +1,28 @@
+<!-- 
+    Write a JavaScript code to take color from user and apply that color to Div tag. 
+-->
+
+<html>
+    <head>
+    <style>
+        #Myelement {
+        width: 500px;
+        height: 100px;
+    }
+    </style>
+    </head>
+    <body>
+        <div id="Myelement"
+        onclick="changeColor()">
+    </div>
+    <input name="MyColorPicker"
+    type="color"
+    id="MyColorPicker" />
+    </body>
+</html>
+    <script>
+        function changeColor() {
+        document.getElementById("Myelement").style.backgroundColor =
+        document.getElementById("MyColorPicker").value;
+        }
+    </script>

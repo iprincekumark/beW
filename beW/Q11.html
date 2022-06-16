@@ -1,0 +1,44 @@
+<!-- 
+    Write a jQuery program to demonstrate the use of mouse
+event, keyboard eventand form event. 
+-->
+<!DOCTYPE html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Program 11</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+ let i = 0;
+ $(document).ready(function () {
+ //Mouse Event
+ $("p").click(function () {
+ $(this).hide();
+ })
+ $("#p1").hover(function () {
+alert("You entered p1!");
+ },
+ function () {
+alert("Bye! You now leave p1!");
+ })
+ //Keyboard event
+ $("input").keypress(function () {
+ $("span").text(i += 1);
+ });
+ //Form event
+ $("#target").blur(function () {
+alert("Handler for .blur() called.");
+ });
+ });
+</script>
+</head>
+<body>
+<p>Click me first</p>
+<p>Click me second</p>
+<p id="p1" style="display: inline; border: 2px solid red">This is text</p><br><br>
+ Enter your name: <input type="text">
+<p>Keypresses: <span>0</span></p>
+<form>
+<input id="target" type="text" value="Field 1">
+</form>
+</body>
+</html>

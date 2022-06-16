@@ -1,0 +1,210 @@
+<!-- 
+    Write a HTML code to generate a class timetable and add external
+CSS to customize the properties of the font, background etc. (color,
+bold and font size) 
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Time Table</title>
+    </head>
+    <body>
+        <style>
+            td {
+                text-align: center;
+                height: 50px;
+                width: 100px;
+                background-color: bisque;
+            }
+            table {
+                margin-left: auto;
+                margin-right: auto;
+            }
+            h1 {
+                text-align: center;
+            }
+            th {
+                background-color:orange;
+            }
+        </style>
+        <h1 >TIME TABLE</h1>
+        <table border="5">
+            <caption></caption>
+            <tr>
+                <th>Day/Period</th>
+                <th>
+                    I 
+                    <br>
+                    9:30-10:20
+                </th>
+                <th>
+                    II
+                    <br>
+                    10:20-11:10
+                </th>
+                <th>
+                    III
+                    <br>
+                    11:10-12:00
+                </th>
+                <th>
+                    12:00-12:40
+                </th>
+                <th>
+                    IV
+                    <br>
+                    12:40-1:30
+                </th>
+                <th>
+                    V
+                    <br>
+                    1:30-2:20
+                </th>
+                <th>
+                    VI 
+                    <br>
+                    2:20-3:10
+                </th>
+                <th>
+                    VII
+                    <br>
+                    3:10-4:00
+                </th>
+            </tr>
+
+            <tr>
+                <td>
+                    <strong>Monday</strong>
+                </td>
+                <td>
+                    Eng
+                </td>
+                <td>
+                    Math
+                </td>
+                <td>
+                    Chem
+                </td>
+                <td rowspan="6">
+                    <strong>L</strong>
+                    <br>
+                    <strong>U</strong>
+                    <br>
+                    <strong>N</strong>
+                    <br>
+                    <strong>C</strong>
+                    <br>
+                    <strong>H</strong>
+                    <br>
+                </td>
+                <td colspan="3">
+                    LAB
+                </td>
+                <td>
+                    Phy
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <strong>Tuesday</strong>
+                </td>
+                <td colspan="3">
+                    LAB
+                </td>
+                <td>
+                    Eng
+                </td>
+                <td>
+                    Chem
+                </td>
+                <td>
+                    Math
+                </td>
+                <td>
+                    SPORTS
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <strong>Wednesday</strong>
+                </td>
+                <td>
+                    Math
+                </td>
+                <td>
+                    Phy
+                </td>
+                <td>
+                    Eng
+                </td>
+                <td>
+                    Chem
+                </td>
+                <td colspan="3">
+                    LIBRARY
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <strong>Thursday</strong>
+                </td>
+                <td>
+                    Phy
+                </td>
+                <td>
+                    Eng
+                </td>
+                <td>
+                    Chem
+                </td>
+                <td colspan="3">
+                    LAB
+                </td>
+                <td>
+                    Math
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <strong>Friday</strong>
+                </td>
+                <td colspan="3">
+                    LAB
+                </td>
+                <td>
+                    Math
+                </td>
+                <td>
+                    Chem
+                </td>
+                <td>
+                    Eng
+                </td>
+                <td>
+                    Phy
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <strong>Saturday</strong>
+                </td>
+                <td>
+                    Eng
+                </td>
+                <td>
+                    Chem
+                </td>
+                <td>
+                    Math
+                </td>
+                <td colspan="3">
+                    SEMINAR
+                </td>
+                <td>
+                    SPORTS
+                </td>
+            </tr>
+
+        </table>
+    </body>
+</html>
